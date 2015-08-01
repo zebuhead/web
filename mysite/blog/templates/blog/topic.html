@@ -1,0 +1,59 @@
+{% extends 'base/base.html' %}
+{% load staticfiles %}
+
+{% block title %}{{topic_name}}{% endblock %}
+
+{% block content %}
+
+        <div class="row">
+
+            <div class="col-md-12">
+                <div class="jumbotron">
+                    <h1 align="center">Dees Thoughts I'm Having!</h1>
+
+                    <h3 align="center">The Blog Space of John Dees</h3>
+                </div>
+                <h3 align="left">{{topic_name}}</h3>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class=" col-md-12">
+
+                    <a class="btn btn-default" href="..">Recent</a>
+                    <a class="btn btn-default" href="./environment">Environment</a>
+                    <a class="btn btn-default" href="./politics">Politics</a>
+                    <a class="btn btn-default" href="./technology">Technology</a>
+                    <a class="btn btn-default" href="./other">Other</a>
+                    <a class="btn btn-default" href="../archive">Archive</a>
+
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col-md-8">
+            {% if in_list == 'True' %}
+                {% for blog in blog_list %}
+                <h3><a href="../{{blog.id}}/">{{blog.title}}</a></h3>
+                <p align="justify">{{blog.short}}</p>
+                {% endfor %}
+            {% else %}
+                <p>There are no articles in this topic area</p>
+            {% endif %}
+
+
+            </div>
+
+            <div class="col-md-4">
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+{% endblock %}

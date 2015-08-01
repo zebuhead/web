@@ -1,0 +1,31 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href={% static "bootstrap/css/bootstrap.css" %}>
+    <meta charset="UTF-8">
+    <title>mapview</title>
+</head>
+<body>
+
+    <div class="container">
+
+
+
+        <ul class="nav nav-tabs">
+            <li><a href="../../">Home</a></li>
+            <li class="active"><a href="../">Portfolio</a></li>
+            <li><a href="JOHN PAUL DEES CV.pdf">CV</a></li>
+            <li><a href="../../blog">Dees Thoughts I'm Having!</a></li>
+        </ul>
+
+        <h1>{{map..url}}</h1>
+        <img src="{{map.image.url}}" height="80%" width="80%">
+
+    </div>
+
+</body>
+</html>

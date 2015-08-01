@@ -1,0 +1,54 @@
+{% extends 'base/base.html' %}
+{% load staticfiles %}
+
+{% block title %}Dees Thoughts I'm Having!{% endblock %}
+
+{% block content %}
+
+        <div class="row">
+
+            <div class="col-md-12">
+                <div class="jumbotron">
+                    <h1 align="center">Dees Thoughts I'm Having!</h1>
+
+                    <h3 align="center">The Blog Space of John Dees</h3>
+                </div>
+                <h3 align="left">Recent Posts</h3>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class=" col-md-12">
+
+                    <a class="btn btn-default" href=".">Recent</a>
+                    <a class="btn btn-default" href="./topic/environment">Environment</a>
+                    <a class="btn btn-default" href="./topic/politics">Politics</a>
+                    <a class="btn btn-default" href="./topic/technology">Technology</a>
+                    <a class="btn btn-default" href="./topic/other">Other</a>
+                    <a class="btn btn-default" href="./archive">Archive</a>
+
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col-md-8">
+                {% for blog in blog_list %}
+                <h3><a href="{{blog.id}}/">{{blog.title}}</a></h3>
+                <p align="justify">{{blog.short}}</p>
+                {% endfor %}
+            </div>
+
+            <div class="col-md-4">
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+{% endblock %}

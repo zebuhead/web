@@ -1,0 +1,28 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static "bootstrap/css/bootstrap.css" %}">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <div class="container">
+
+        <ul class="nav nav-tabs">
+            <li {% if active = 'home' %}class="active"{% endif %}><a href="{% url "home" %}">Home</a></li>
+            <li {% if active = 'portfolio' %}class="active"{% endif %}><a href="{% url "portfolio:index" %}">Portfolio</a></li>
+            <li {% if active = 'cv' %}class="active"{% endif %} ><a href="{% url "CV" %}">CV</a></li>
+            <li {% if active = 'blog' %}class="active"{% endif %}><a href="{% url "blog:index" %}">Dees Thoughts I'm Having!</a></li>
+        </ul>
+
+        {% block content %}{% endblock %}
+
+    </div>
+</body>
+</html>
