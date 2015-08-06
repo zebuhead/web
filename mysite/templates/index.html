@@ -1,0 +1,123 @@
+{% extends 'base/base.html' %}
+{% load staticfiles %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+	<div class="main-content row">
+		<div class="left col-lg-6">
+			<div class="contact col-lg-12">
+
+				<div class="image col-lg-4"><img src="{%static "JohnDees2.jpg" %}" alt="John Dees" /></div>
+
+                    <div>John holds a Bachelor of Science in Applied Environmental and Spatial Analysis.
+                        He is currently a first-year graduate student in the Energy and Resources Group at UC Berkeley.
+                        John is broadly interested in the transactional relationship between humans and their environment.
+                        Furthermore, he is interested in the manner which rapidly emerging technologies such as GIS and Remote
+                        Sensing will assist in understanding that relationship. John has research interests in land use,
+                        water , energy, sustainable development, environmental ethics, environmental history, economics, and policy.
+                        His academic pursuits span the physical and social sciences as he believes future challenges will require
+                        modes of inquiry that cross traditional disciplinary boundaries.
+                    </div>
+
+                    <div class="more-button btn">
+                        <a href="#">More about John</a>
+                    </div>
+
+                <div class="social-links col-lg-12 ">
+
+					<ul>
+						<li><i class="fa fa-envelope"></i>Gmail</li>
+						<li><i class="fa fa-facebook"></i>Facebook</li>
+						<li><i class="fa fa-linkedin"></i>LinkedIn</li>
+						<li><i class="fa fa-github"></i>GitHub</li>
+					</ul>
+				</div>
+            </div>
+
+            <div class="portfolio col-md-12">
+				<h3 class="section-title col-md-12">PORTFOLIO</h3>
+
+                <div class=" contact quote col-md-12">
+                “There are maps and there are maps and there are maps.
+                The uncanny thing was that he could see all of them at once,
+                filter some, pick them out like transparent windows and place
+                them even delicately and consecutively in a complex grid of pattern,
+                spatial discernment, body politic." (Karen Tei Yamashita, Tropic of Orange)
+                </div>
+
+                <div class="col-md-12 sample-map">
+                    <img  src="{{map.image.url}}" alt="Portfolio Sample">
+                </div>
+
+                <div class="more-button btn">
+                        <a href="#">See Portfolio</a>
+                </div>
+
+			</div>
+
+
+
+			<div class="CV col-md-12">
+                <h3 class="section-title col-md-12">Professional and Academic</h3>
+
+                <div class=" contact quote col-md-12">
+                "Catchy quote here"
+                </div>
+
+                <div class="col-md-12 contact">
+                    <h4>Education</h4>
+                    <ul>
+                        <li>Currently Graduate Student with the Energy and Resources Group at UC Berkeley</li>
+                        <li>B.S. Environmental Spatial Analysis, University of North Georgia</li>
+                        <li>A.S. General Science, University of North Georgia</li>
+                        <li>Geographic Information Science Certificate, University of North Georgia</li>
+
+                    </ul>
+
+                    <h4>Skill Sets</h4>
+                    <ul>
+                      <li>GIS, Spatial Analysis, Data Acquisition</li>
+                      <li>Digital Image Processing, OBIA, (Un)supervised Classification, LIDAR</li>
+                      <li>Object Oriented Programming, Computational Models, ArcPy, PyLab, SQL</li>
+                      <li>GIS Software: ESRI Products, QGIS, HAZUS</li>
+                      <li>Remote Sensing/LIDAR: eCognition, ERDAS Imagine, QT MODELER</li>
+                      <li>Programming/Web: Python,HTML,CSS, Django, SQL </li>
+
+                    </ul>
+
+                    <h4>Accomplishments/Awards</h4>
+                    <ul>
+                        <li>Udall Scholar, 2014</li>
+                        <li>Berkeley Graduate Fellowship</li>
+                        <li>Clark-Theodore Outstanding Non-Traditional Student</li>
+                    </ul>
+                </div>
+
+                <div class="more-button btn">
+                        <a href="#">John's CV >></a>
+                </div>
+
+            </div>
+
+        </div>
+
+
+		<div class="right col-lg-5 col-lg-offset-1">
+			<div class="recent-blog col-md-12">
+                <h3 class="section-title col-md-12">Dees Thoughts I'm Having!</h3>
+                <h4 class="section-title col-md-12">John's Blog</h4>
+
+                <div class="contact blog">
+                    <h4>{{blog.title}}</h4>
+                        <h6>{{blog.author}}   {{blog.pub_date}}</h6>
+                    <div class="contact">{{blog.content}}</div>
+                </div>
+            </div>
+
+
+			<div class="links"></div>
+			<div class="news"></div>
+		</div>
+	</div>
+{% endblock %}
