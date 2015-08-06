@@ -1,4 +1,3 @@
-from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import RequestContext, loader
 from .models import Map, Project, Publication
@@ -11,11 +10,15 @@ def home(request):
     return HttpResponse(template.render(context))
 
 def index(request):
-    maps_list = Map.objects.order_by('-pub_date')
+    projects = Project.objects.order_by('title')
+    projects_list = []
+    for project in projects:
+        map_list = (Map.objects.filter(project=project))
+        projects_list.append([project, map_list])
     pubs_list = Publication.objects.order_by('-pub_date')
     template = loader.get_template('portfolio/index.html')
     context = RequestContext(request, {
-        'maps_list': maps_list,
+        'projects_list': projects_list,
         'pubs_list': pubs_list,
         'active': 'portfolio',
     })

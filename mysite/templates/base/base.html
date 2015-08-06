@@ -1,28 +1,39 @@
 {% load staticfiles %}
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML>
+<html lang="en-US">
 <head>
-    <meta charset="UTF-8">
+	<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="{% static "bootstrap/css/bootstrap.css" %}">
-    <title>{% block title %}{% endblock %}</title>
+	<title>{% block title %}{% endblock %}</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="{% static "bootstrap/css/bootstrap.min.css" %}">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="{% static "style.css" %}">
+
 </head>
 <body>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-    <div class="container">
+	<div class="header col-lg-12">
+		<div class="title col-lg-12"><img src="{% static "Header.jpg" %}" width=80%></div>
+		<div class="nav-bar col-lg-12">
+			<ul>
+				<li {% if active = 'home' %}class="active"{% endif %}><a href="{% url "home" %}">Home</a></li>
+				<li {% if active = 'portfolio' %}class="active"{% endif %}><a href="{% url "portfolio:index" %}">Portfolio</a></li>
+				<li {% if active = 'cv' %}class="active"{% endif %}><a href="{% url "CV" %}">CV</a></li>
+				<li {% if active = 'blog' %}class="active"{% endif %}><a href="{% url "blog:index" %}">Dees Thoughts I'm Having!</a></li>
+			</ul>
+		</div>
+	</div>
 
-        <ul class="nav nav-tabs">
-            <li {% if active = 'home' %}class="active"{% endif %}><a href="{% url "home" %}">Home</a></li>
-            <li {% if active = 'portfolio' %}class="active"{% endif %}><a href="{% url "portfolio:index" %}">Portfolio</a></li>
-            <li {% if active = 'cv' %}class="active"{% endif %} ><a href="{% url "CV" %}">CV</a></li>
-            <li {% if active = 'blog' %}class="active"{% endif %}><a href="{% url "blog:index" %}">Dees Thoughts I'm Having!</a></li>
-        </ul>
+{% block content %}{% endblock %}
 
-        {% block content %}{% endblock %}
-
-    </div>
 </body>
 </html>
