@@ -5,45 +5,46 @@
 
 {% block content %}
 
-        <div class="row">
+   <div class="left main-content row">
 
-            <div class="col-md-12">
-                <div class="jumbotron">
-                    <h1 align="center">Dees Thoughts I'm Having!</h1>
+            <div class="col-md-12 contact">
+                <div>
+                    <h3 align="center">Dees Thoughts I'm Having!</h3>
 
-                    <h3 align="center">The Blog Space of John Dees</h3>
+                    <h5 align="center">The Blog Space of John Dees</h5>
                 </div>
+
             </div>
+
+
+
+        <div class="col-md-12 contact">
+
+                    <a class="btn btn-primary" href="{% url "blog:index" %}">Recent</a>
+                    <a class="btn btn-primary" href="{% url "blog:topic" topic_name="environment" %}">Environment</a>
+                    <a class="btn btn-primary" href="{% url "blog:topic" topic_name="politics" %}">Politics</a>
+                    <a class="btn btn-primary" href="{% url "blog:topic" topic_name="technology" %}">Technology</a>
+                    <a class="btn btn-primary" href="{% url "blog:topic" topic_name="other" %}">Other</a>
+                    <a class="btn btn-primary" href="{% url "blog:archive"  %}">Archive</a>
 
         </div>
 
-        <div class="row">
-            <div class=" col-md-12">
 
-                    <a class="btn btn-default" href="..">Recent</a>
-                    <a class="btn btn-default" href="../topic/environment">Environment</a>
-                    <a class="btn btn-default" href="../topic/politics">Politics</a>
-                    <a class="btn btn-default" href="../topic/technology">Technology</a>
-                    <a class="btn btn-default" href="../topic/other">Other</a>
-                    <a class="btn btn-default" href="../archive">Archive</a>
 
-            </div>
-        </div>
-
-        <div class="row">
-
-            <div class="col-md-8">
-                <h3>{{blog.title}}</h3>
-                <h5><b>By {{blog.author}}</b></h5>
-                <h5>Published {{blog.pub_date}}</h5>
+            <div class="col-md-8 contact">
+                <h5>{{blog.title}}</h5>
+                <h5><By {{blog.author}}</h5>
+                <div class="date">{{blog.author}}  {{blog.pub_date}}</div>
                 <p align="justify">{{blog.content | safe}}</p>
             </div>
+
+
 
             <div class="col-md-4">
 
             </div>
 
-        </div>
+
 
 
     </div>

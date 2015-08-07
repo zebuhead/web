@@ -21,20 +21,21 @@
 
             <div class="col-md-12 contact">
 
-                    <a class="btn btn-primary" href=".">Recent</a>
-                    <a class="btn btn-primary" href="./topic/environment">Environment</a>
-                    <a class="btn btn-primary" href="./topic/politics">Politics</a>
-                    <a class="btn btn-primary" href="./topic/technology">Technology</a>
-                    <a class="btn btn-primary" href="./topic/other">Other</a>
-                    <a class="btn btn-primary" href="./archive">Archive</a>
+                    <a class="btn btn-primary" href="{% url "blog:index" %}">Recent</a>
+                    <a class="btn btn-primary" href="{% url "blog:topic" topic_name="environment" %}">Environment</a>
+                    <a class="btn btn-primary" href="{% url "blog:topic" topic_name="politics" %}">Politics</a>
+                    <a class="btn btn-primary" href="{% url "blog:topic" topic_name="technology" %}">Technology</a>
+                    <a class="btn btn-primary" href="{% url "blog:topic" topic_name="other" %}">Other</a>
+                    <a class="btn btn-primary" href="{% url "blog:archive"  %}">Archive</a>
 
             </div>
 
 
 
-            <div class="left col-md-12 contact">
+            <div class=" col-md-12 contact">
                 {% for blog in blog_list %}
                 <h5><a href="{{blog.id}}/">{{blog.title}}</a></h5>
+                <div class="date">{{blog.author}}  {{blog.pub_date}}</div>
                 <p align="justify">{{blog.short}}</p>
                 {% endfor %}
             </div>

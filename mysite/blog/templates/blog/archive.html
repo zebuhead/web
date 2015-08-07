@@ -21,12 +21,12 @@
         <div class="row">
             <div class=" col-md-12">
 
-                    <a class="btn btn-default" href=".">Recent</a>
-                    <a class="btn btn-default" href="./topic/environment">Environment</a>
-                    <a class="btn btn-default" href="./topic/politics">Politics</a>
-                    <a class="btn btn-default" href="./topic/technology">Technology</a>
-                    <a class="btn btn-default" href="./topic/other">Other</a>
-                    <a class="btn btn-default" href="./archive">Archive</a>
+                    <a class="btn btn-primary" href="{% url "blog:index" %}">Recent</a>
+                    <a class="btn btn-primary" href="{% url "blog:topic" topic_name="environment" %}">Environment</a>
+                    <a class="btn btn-primary" href="{% url "blog:topic" topic_name="politics" %}">Politics</a>
+                    <a class="btn btn-primary" href="{% url "blog:topic" topic_name="technology" %}">Technology</a>
+                    <a class="btn btn-primary" href="{% url "blog:topic" topic_name="other" %}">Other</a>
+                    <a class="btn btn-primary" href="{% url "blog:archive"  %}">Archive</a>
 
             </div>
         </div>
