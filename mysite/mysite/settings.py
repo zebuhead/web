@@ -108,5 +108,5 @@ STATIC_URL = '/static/'
 STATIC_ROOT = 'static_root'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
 MEDIA_URL = '/media/'
-MEDIA_ROOT = 'C:/Users/John Dees/PycharmProjects/mysite/portfolio/media_root/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'portfolio/media_root/')
 
