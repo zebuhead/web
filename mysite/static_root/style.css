@@ -9,7 +9,6 @@ body {
 .nav-bar > ul {
   margin: auto;
   max-width: 1200px;
-  padding: 10px;
   width: 100%;
 }
 
@@ -60,26 +59,92 @@ body {
   border-radius: 5px;
   clear: both;
   margin: 10px 0;
-  padding: 10px 0;
+  padding: 10px 10px;
 }
 
+.contact {
+   color:#FFFFFF;
+   font-size: 17px;
+
+   }
+
 .contact .image {
-  display: inline-block;
+    float: left;
 }
 
 .social-links {
- display:inline-block;
+  color: blue;
+  pad-top: 10px;
 }
 
 .contact .image img {
   height: auto;
-  max-width: 300px;
+  max-width: 175px;
   width: 100%;
 }
 
 .social-links ul {
-  font-size: 25px;
-  list-style: outside none none;
-  margin: 0;
   padding: 0;
+  font-size: 20px;
+  list-style: outside none none;
+  margin: 7px;
+
 }
+
+.social-links ul li {
+   display: inline;
+   padding-right: 20px;
+   }
+
+.social-links ul li i {
+display: inline;
+}
+
+.map-list {
+ font-size: 15px;
+ padding: 20px;
+ line-height: 7;
+ color: #FFF;
+ }
+
+ .map-list img {
+ float: right;
+ padding-right: 20px;
+ height: 100px;
+ width: 100px;
+ }
+
+.more-button {
+ float: right;
+ background-color: blue;
+ color: #000;
+ padding-right: 30px;
+ padding-bottom: 5px;
+ text-shadow: 0px 0px #FFF;
+
+ }
+
+.quote {
+  font-size: 12px;
+  }
+
+.sample-map img {
+   height: auto;
+   width: 300px;
+   display: block;
+   margin-left: auto;
+   margin-right: auto
+   }
+
+.sample-map {
+padding-bottom: 20px;
+padding-top: 20px;
+}
+
+.sample-map btn {
+   background-color: green;
+   }
+
+a {
+   color: red;
+   }

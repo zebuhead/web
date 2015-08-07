@@ -24,4 +24,14 @@ def cv(request):
     context = RequestContext(request, {
         'active': 'cv',
     })
-    return HttpResponse(template.render(context))
+    return HttpResponse(template.render())
+
+def bio(request):
+    template = loader.get_template('bio.html')
+
+    return HttpResponse(template.render())
+
+def links(request):
+    template = loader.get_template('links.html')
+
+    return HttpResponse(template.render())

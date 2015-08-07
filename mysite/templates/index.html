@@ -10,18 +10,16 @@
 
 				<div class="image col-lg-4"><img src="{%static "JohnDees2.jpg" %}" alt="John Dees" /></div>
 
-                    <div>John holds a Bachelor of Science in Applied Environmental and Spatial Analysis.
-                        He is currently a first-year graduate student in the Energy and Resources Group at UC Berkeley.
-                        John is broadly interested in the transactional relationship between humans and their environment.
+                    <div>John is broadly interested in the transactional relationship between humans and their environment.
                         Furthermore, he is interested in the manner which rapidly emerging technologies such as GIS and Remote
                         Sensing will assist in understanding that relationship. John has research interests in land use,
                         water , energy, sustainable development, environmental ethics, environmental history, economics, and policy.
-                        His academic pursuits span the physical and social sciences as he believes future challenges will require
-                        modes of inquiry that cross traditional disciplinary boundaries.
+                        John holds a Bachelor of Science in Environmental Spatial Analysis from the University of North Georgia.
+                        He is currently a first-year Masters/PhD student in the Energy and Resources Group at UC Berkeley.
                     </div>
 
-                    <div class="more-button btn">
-                        <a href="#">More about John</a>
+                    <div class="img-button">
+                        <a href="{% url "bio" %}"><img src="{% static "about_button.png" %}"></a>
                     </div>
 
                 <div class="social-links col-lg-12 ">
@@ -36,7 +34,7 @@
             </div>
 
             <div class="portfolio col-md-12">
-				<h3 class="section-title col-md-12">PORTFOLIO</h3>
+				<h5 class="section-title col-md-12 sub-head">Portfolio</h5>
 
                 <div class=" contact quote col-md-12">
                 “There are maps and there are maps and there are maps.
@@ -50,8 +48,8 @@
                     <img  src="{{map.image.url}}" alt="Portfolio Sample">
                 </div>
 
-                <div class="more-button btn">
-                        <a href="#">See Portfolio</a>
+                <div class="img-button">
+                        <a href="{% url "portfolio:index" %}"><img src="{% static "portfolio_button.png" %}"></a>
                 </div>
 
 			</div>
@@ -59,23 +57,23 @@
 
 
 			<div class="CV col-md-12">
-                <h3 class="section-title col-md-12">Professional and Academic</h3>
+                <h5 class="section-title col-md-12 sub-head">Professional and Academic</h5>
 
                 <div class=" contact quote col-md-12">
                 "Catchy quote here"
                 </div>
 
                 <div class="col-md-12 contact">
-                    <h4>Education</h4>
+                    <h5>Education</h5>
                     <ul>
-                        <li>Currently Graduate Student with the Energy and Resources Group at UC Berkeley</li>
+                        <li>Currently a Masters/PhD Student with the Energy and Resources Group at UC Berkeley</li>
                         <li>B.S. Environmental Spatial Analysis, University of North Georgia</li>
                         <li>A.S. General Science, University of North Georgia</li>
                         <li>Geographic Information Science Certificate, University of North Georgia</li>
 
                     </ul>
 
-                    <h4>Skill Sets</h4>
+                    <h5>Skill Sets</h5>
                     <ul>
                       <li>GIS, Spatial Analysis, Data Acquisition</li>
                       <li>Digital Image Processing, OBIA, (Un)supervised Classification, LIDAR</li>
@@ -86,7 +84,7 @@
 
                     </ul>
 
-                    <h4>Accomplishments/Awards</h4>
+                    <h5>Accomplishments/Awards</h5>
                     <ul>
                         <li>Udall Scholar, 2014</li>
                         <li>Berkeley Graduate Fellowship</li>
@@ -94,8 +92,8 @@
                     </ul>
                 </div>
 
-                <div class="more-button btn">
-                        <a href="#">John's CV >></a>
+                <div class="img-button">
+                        <a href={% url "CV" %}""><img src="{% static "cv_button.png" %}"></a>
                 </div>
 
             </div>
@@ -105,19 +103,113 @@
 
 		<div class="right col-lg-5 col-lg-offset-1">
 			<div class="recent-blog col-md-12">
-                <h3 class="section-title col-md-12">Dees Thoughts I'm Having!</h3>
-                <h4 class="section-title col-md-12">John's Blog</h4>
+                <h5 class="section-title col-md-12 sub-head">Dees Thoughts I'm Having!</h5>
+                <h6 class="section-title col-md-12 sub-head">Recent Post from John's Blog</h6>
 
                 <div class="contact blog">
-                    <h4>{{blog.title}}</h4>
-                        <h6>{{blog.author}}   {{blog.pub_date}}</h6>
-                    <div class="contact">{{blog.content}}</div>
+                    <h5>{{blog.title}}</h5>
+                        <div class="date">{{blog.author}}   {{blog.pub_date}}</div>
+                    <div>{{blog.content}}</div>
+                </div>
+
+                <div class="img-button">
+                        <a href="{% url "blog:index" %}"><img src="{% static "blog_button.png" %}"></a>
                 </div>
             </div>
 
 
-			<div class="links"></div>
-			<div class="news"></div>
+			<div class="links contact col-md-12">
+                <h5 class="section-title col-md-12 sub-head">Hot Links</h5>
+                <h5 class="section-title col-md-12 sub-head">Projects I've worked on...</h5>
+                <div>
+                    <ul class="contact">
+                        <li><a href="https://web.ung.edu/gis/hallco/historic/index.html">North Georgia Spaces and Places</a></li>
+                        <li><a href="https://github.com/johnpdees">Python Projects and Contributions on Github</a></li>
+                    </ul>
+
+                </div>
+
+                <h5 class="section-title col-md-12 sub-head">Environment</h5>
+                <div>
+                    <ul class="contact">
+                        <li><a href="http://www.ncdc.noaa.gov/climate-monitoring/index.php">NOAA Climate Monitoring</a></li>
+                        <li><a href="http://www.nrel.gov/gis/">National Renewable Energy Laboratory GIS</a></li>
+                        <li><a href="http://www.mrlc.gov/">National Landcover Database</a></li>
+                        <li><a href="http://landsat.usgs.gov/gallery_view.php?category=nocategory&thesort=pictureId">LANDSAT Image Gallery</a></li>
+                        <li><a href="http://ipcc.ch/">Intergovernmental Panel on Climate Change 5th Assessment</a></li>
+                        <li><a href="udall.gov">Udall Foundation</a></li>
+                    </ul>
+
+                </div>
+
+                <h5 class="section-title col-md-12 sub-head">Politics</h5>
+                <div>
+                    <ul class="contact">
+                        <li><a href="https://berniesanders.com/issues/">Bernie Sanders 2016 Platform</a></li>
+                        <li><a href="http://www.politifact.com/">Politifact</a></li>
+                    </ul>
+
+                </div>
+
+
+
+                <h5 class="section-title col-md-12 sub-head">Education</h5>
+                <div>
+                    <ul class="contact">
+                        <li><a href="https://www.edx.org/">EdX: Free College Courses</a></li>
+                        <li><a href="https://www.coursera.org/">Coursera: Free College Courses</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=UteHieHJ2MQ&list=PLdABveWfnEeIpJJCOZg54K5h2RF2bS3EH">Object Based Image Analysis in eCognition</a></li>
+
+                    </ul>
+
+
+
+                </div>
+
+                <div class="more-button btn">
+                    <a href="{% url "links" %}">More Great Links >></a>
+                    </div>
+
+
+
+
+
+            </div>
+
+            <div class="thought contact col-md-12">
+                <h5 class="section-title col-md-12 sub-head">Carl Sagan's Pale Blue Dot</h5>
+
+                <img src="{% static "Pale_Blue.png" %}" alt="Earth" height="auto" max-width="100px" width="100%">
+
+                <div class="content" align="justify"><font size=1>“Look again at that dot. That's here. That's home. That's us. On it
+                    everyone you love, everyone you know, everyone you ever heard of, every human being who ever was,
+                    lived out their lives. The aggregate of our joy and suffering, thousands of confident religions,
+                    ideologies, and economic doctrines, every hunter and forager, every hero and coward, every creator
+                    and destroyer of civilization, every king and peasant, every young couple in love, every mother and
+                    father, hopeful child, inventor and explorer, every teacher of morals, every corrupt politician,
+                    every "superstar," every "supreme leader," every saint and sinner
+                    in the history of our species lived there-on a mote of dust suspended in a sunbeam.
+                    The Earth is a very small stage in a vast cosmic arena. Think of the endless cruelties visited by the
+                    inhabitants of one corner of this pixel on the scarcely distinguishable inhabitants of some other
+                    corner, how frequent their misunderstandings, how eager they are to kill one another, how fervent their hatreds.
+                    Think of the rivers of blood spilled by all those generals and emperors so
+                    that, in glory and triumph, they could become the momentary masters of a fraction of a dot.
+                    Our posturings, our imagined self-importance, the delusion that we have some privileged position in the
+                    Universe, are challenged by this point of pale light. Our planet is a lonely speck in the great
+                    enveloping cosmic dark. In our obscurity, in all this vastness, there is no hint that help will come
+                    from elsewhere to save us from ourselves. The Earth is the only world known so far to harbor life.
+                    There is nowhere else, at least in the near future, to which our species could migrate. Visit, yes.
+                    Settle, not yet. Like it or not, for the moment the Earth is where we make our stand. It has been
+                    said that astronomy is a humbling and character-building experience. There is perhaps no
+                    better demonstration of the folly of human conceits than this distant image of our tiny world. To me,
+                    it underscores our responsibility to deal more kindly with one another, and to preserve and cherish the
+                    pale blue dot, the only home we've ever known.”
+                </font></div>
+
+
+
+                </div>
+
 		</div>
 	</div>
 {% endblock %}

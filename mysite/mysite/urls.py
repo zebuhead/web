@@ -27,5 +27,7 @@ urlpatterns = [
     url(r'^portfolio/', include('portfolio.urls', namespace='portfolio')),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', views.home, name='home'),
+    url(r'^bio/', views.bio, name='bio'),
+    url(r'^links/', views.links, name='links'),
     url(r'^CV/', views.cv, name='CV')
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -5,14 +5,13 @@
     <div class="main-content row">
 		<div class="left col-lg-12">
             <div class="header">
-                <h2>Portfolio</h2>
-            </div>
-
-            <div class="map-header">
-                <h4>Selected Maps and Spatial Analysis</h4>
+                <h2 class="top-head">Portfolio</h2>
             </div>
 
             <div class="map-list">
+                <div class="map-header">
+                    <h4 class="sub-head">Selected Maps and Spatial Analysis</h4>
+                </div>
                 {% if projects_list %}
                 {% for project, maps in projects_list %}
                 <div class="project-head">
@@ -25,7 +24,7 @@
                         <li><a href="{{map.id}}/">{{map.title}}     </a><img src="{{map.image.url}}"></li>
                     </ul>
                     {% endfor %}
-                    <a href="#">See all maps in this project...</a>
+
                 </div>
                 {% endfor %}
                 {% else %}
@@ -33,11 +32,10 @@
                 {% endif %}
             </div>
 
-            <div class="pubs-header">
-                <h4>Selected Publications</h4>
-            </div>
-
             <div class="pubs">
+                <div class="pubs-header sub-head">
+                    <h4>Selected Publications</h4>
+                </div>
                 {% if pubs_list %}
                 <ol>
                     {% for pub in pubs_list %}
@@ -47,13 +45,18 @@
                 </ol>
             </div>
 
-            <div class="proj-header">
-                <h4>Other Projects Online</h4>
-            </div>
+
 
             <div class="projects">
-                <a href="https://web.ung.edu/gis/hallco/historic/index.html">Image Processing and Rectification of Historic North Georgia Imagery for Web based History Project</a>
-                <a href="https://github.com/johnpdees">Python Projects and Contributions on Github</a>
+                <div class="proj-header sub-head">
+                    <h4>Other Projects Online</h4>
+                </div>
+                <ul>
+                    <li><a href="https://web.ung.edu/gis/hallco/historic/index.html">Image Processing and Rectification of Historic North Georgia Imagery for Web based History Project</a></li>
+                    <li> <a href="https://github.com/johnpdees">Python Projects and Contributions on Github</a></li>
+                </ul>
+
+
             </div>
         </div>
     </div>
