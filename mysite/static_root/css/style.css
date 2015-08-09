@@ -18,6 +18,7 @@ body {
   display: inline-block;
   font-size: 20px;
   padding: 10px 30px;
+  position: relative;
 }
 
 .nav-bar li::after {
@@ -64,12 +65,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#898989', end
   color: #a6a6a6;
   display: block;
   width: 100%;
-  font-family: 'base_02', sans-serif;
+  font-family: 'base02', sans-serif;
 }
 
 .nav-bar {
   background-color: #8e8e8e;
-  height: 30px;
   text-align: right;
   overflow: hidden;
   background: #898989; /* Old browsers */
