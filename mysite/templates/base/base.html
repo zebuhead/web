@@ -26,10 +26,10 @@
 		<div class="title col-lg-12"><img src="{% static "Header.jpg" %}" width=70%></div>
 		<div class="nav-bar col-lg-12 nav-right">
 			<ul>
-				<li {% if active = 'home' %}class="active"{% endif %}><a href="{% url "home" %}"><img class="nav-img" src="{% static "nav_2about.jpg" %}"></a></li>
-				<li {% if active = 'portfolio' %}class="active"{% endif %}><a href="{% url "portfolio:index" %}"><img class="nav-img" src="{% static "nav_3portfolio.jpg" %}"></a></li>
-				<li {% if active = 'cv' %}class="active"{% endif %}><a href="{% url "CV" %}"><img class="nav-img" src="{% static "nav_4cv.jpg" %}"></a></li>
-				<li {% if active = 'blog' %}class="active"{% endif %}><a href="{% url "blog:index" %}"><img class="nav-img" src="{% static "nav_5blog.jpg" %}"></a></li>
+				<li {% if active = 'home' %}class="active"{% endif %}><a href="{% url "home" %}">Home</a></li>
+				<li {% if active = 'portfolio' %}class="active"{% endif %}><a href="{% url "portfolio:index" %}">Portfolio</a></li>
+				<li {% if active = 'cv' %}class="active"{% endif %}><a href="{% url "CV" %}">CV</a></li>
+				<li {% if active = 'blog' %}class="active"{% endif %}><a href="{% url "blog:index" %}">Dees Thoughs I'm Having</a></li>
 			</ul>
 		</div>
 	</div>
